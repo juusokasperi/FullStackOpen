@@ -6,7 +6,7 @@
 ## Parts 00 through 07
 Basic part of the course, covering creating frontend and backend using React and NodeJS, creating testing suites, managing users, states, react routers, custom hooks, and styling.
 
-## [Part 08 (GraphQL)](/part08)
+## [Part 08 (GraphQL)](/part8)
 ## Part 09 (TypeScript)
 ## Part 10 (React Native)
 ## Part 11 (CI/CD)
