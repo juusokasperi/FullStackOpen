@@ -1,0 +1,70 @@
+Script started on Thu Sep 26 18:46:08 2024
+[1m[7m%[27m[1m[0m                                                                                                                                                              ]7;file://Juusos-MacBook-Air.local/Users/juusorinta/FullstackOpen/part12-containers-applications/script-answers]2;juusorinta@Juusos-MacBook-Air]1;..cript-answers]7;file://Juusos-MacBook-Air.local/Users/juusorinta/FullstackOpen/part12-containers-applications/script-answers\[0m[27m[24m[J[35m[00m ~/FullstackOpen/part12-containers-applications/script-answers/ [00m[35m[[32mmain[31m*[35m][39m [00m[K[?1h=[?2004hscript exercise12_8.txt[23Dcd script-answers      [17Dls               [15Dcd ..ls   cd ..docker exec -it 10fdf mongosh -u root -p example[48Dcd ..                                           [43Ddocker exec -it 10fdf mongosh -u root -p example[48Dcd ..                                           [43D  c  ddocker ps -la[?1l>[?2004l
+]2;docker ps -la]1;dockerCONTAINER ID   IMAGE     COMMAND                  CREATED       STATUS       PORTS                     NAMES
+10fdf9356990   mongo     "docker-entrypoint.s…"   2 hours ago   Up 2 hours   0.0.0.0:3456->27017/tcp   todo-backend-mongo-1
+[1m[7m%[27m[1m[0m                                                                                                                                                              ]7;file://Juusos-MacBook-Air.local/Users/juusorinta/FullstackOpen/part12-containers-applications/script-answers]2;juusorinta@Juusos-MacBook-Air]1;..cript-answers]7;file://Juusos-MacBook-Air.local/Users/juusorinta/FullstackOpen/part12-containers-applications/script-answers\[0m[27m[24m[J[35m[00m ~/FullstackOpen/part12-containers-applications/script-answers/ [00m[35m[[32mmain[31m*[35m][39m [00m[K[?1h=[?2004hdocker ps -la[13Dscript exercise12_8.txt[23Dcd script-answers      [17Dls               [15Dcd ..ls   cd ..docker exec -it 10fdf mongosh -u root -p example[?1l>[?2004l
+]2;docker exec -it 10fdf mongosh -u root -p example]1;docker]0;mongosh mongodb://<credentials>@127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000Current Mongosh Log ID:	66f581d9f7ea8877d01681ec
+Connecting to:		[1m[32mmongodb://<credentials>@127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.3.1[0m
+Using MongoDB:		8.0.0
+[1m[33mUsing Mongosh[0m:		2.3.1
+
+For mongosh info see: https://www.mongodb.com/docs/mongodb-shell/
+
+[1G[0J [1G[1m[33m------[0m
+   [1m[33mThe server generated these startup warnings when booting[0m
+   2024-09-26T14:13:51.995+00:00: For customers running the updated tcmalloc-google memory allocator, we suggest setting the contents of sysfsFile to 'defer+madvise'
+   2024-09-26T14:13:51.995+00:00: We suggest setting the contents of sysfsFile to 0.
+   2024-09-26T14:13:51.995+00:00: Your system has glibc support for rseq built in, which is not yet supported by tcmalloc-google and has critical performance implications. Please set the environment variable GLIBC_TUNABLES=glibc.pthread.rseq=0
+   2024-09-26T14:13:51.995+00:00: vm.max_map_count is too low
+   2024-09-26T14:13:51.995+00:00: We suggest setting swappiness to 0 or 1, as swapping can cause performance problems.
+[1m[33m------[0m
+
+[1G[0Jtest> [7Gshow dbs
+[1madmin[0m         100.00 KiB
+[1mconfig[0m         60.00 KiB
+[1mlocal[0m          72.00 KiB
+[1mthe_database[0m   72.00 KiB
+[1G[0Jtest> [7Guse the_database
+switched to db the_database
+[1G[0Jthe_database> [15Gshow collections
+[1mtodos[0m
+[1G[0Jthe_database> [15Gdb.o[1G[0Jthe_database> db.[18Gtodos.insertOne({ text[33mtext[39m: [32m'[39m[32mI[39m[32mn[39m[32mc[39m[32mr[39m[32me[39m[32ma[39m[32ms[39m[32me[39m [32mt[39m[32mh[39m[32me[39m [32mn[39m[32mu[39m[32mm[39m[32mb[39m[32me[39m[32mr[39m [32mo[39m[32mf[39m [32mt[39m[32mo[39m[32mo[39m[32ml[39m[32ms[39m [32mi[39m[32mn[39m [32mm[39m[32my[39m [32mt[39m[32mo[39m[32mo[39m[32ml[39m [32mb[39m[32me[39m[32ml[39m[32mt[39m[32m'[39m, d[36mdo[39mdone: fals[33mfalse[39m })
+{
+  acknowledged: [33mtrue[39m,
+  insertedId: ObjectId([32m'66f58205f7ea8877d01681ed'[39m)
+}
+[1G[0Jthe_database> [15Gdb.todos.find({})
+[
+  {
+    _id: ObjectId([32m'66f566460e0a9503a61681ed'[39m),
+    text: [32m'Pay mortgage'[39m,
+    done: [33mfalse[39m
+  },
+  {
+    _id: ObjectId([32m'66f566460e0a9503a61681ee'[39m),
+    text: [32m'Learn about containers'[39m,
+    done: [33mfalse[39m
+  },
+  {
+    _id: ObjectId([32m'66f5816c3fee0002d31681ed'[39m),
+    text: [32m'Clean the kitchen'[39m,
+    done: [33mfalse[39m
+  },
+  {
+    _id: ObjectId([32m'66f581953fee0002d31681ee'[39m),
+    text: [32m'Use insertOne instead of deprecated insert'[39m,
+    done: [33mtrue[39m
+  },
+  {
+    _id: ObjectId([32m'66f58205f7ea8877d01681ed'[39m),
+    text: [32m'Increase the number of tools in my tool belt'[39m,
+    done: [33mfalse[39m
+  }
+]
+[1G[0Jthe_database> [15Gexit
+[1m[7m%[27m[1m[0m                                                                                                                                                              ]7;file://Juusos-MacBook-Air.local/Users/juusorinta/FullstackOpen/part12-containers-applications/script-answers]2;juusorinta@Juusos-MacBook-Air]1;..cript-answers]7;file://Juusos-MacBook-Air.local/Users/juusorinta/FullstackOpen/part12-containers-applications/script-answers\[0m[27m[24m[J[35m[00m ~/FullstackOpen/part12-containers-applications/script-answers/ [00m[35m[[32mmain[31m*[35m][39m [00m[K[?1h=[?2004heexit[?1l>[?2004l
+]2;exit]1;exit
+Saving session...completed.
+Deleting expired sessions...       1 completed.
+
+Script done on Thu Sep 26 18:47:34 2024

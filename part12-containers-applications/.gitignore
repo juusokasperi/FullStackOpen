@@ -1,0 +1,6 @@
+.DS_Store
+node_modules
+.env
+requests
+mongo_data
+redis_data

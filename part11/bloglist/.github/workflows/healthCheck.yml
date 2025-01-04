@@ -1,0 +1,35 @@
+name: Bloglist Health Check
+
+env:
+  RENDER_URL: https://part11-bloglist.onrender.com/
+
+on:
+  schedule:
+    - cron: '35 13 1,15 * *'
+
+jobs:
+  health_check:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Check the deployed URL
+        uses: Jtalk/url-health-check-action@v4
+        with:
+          url: ${{ env.RENDER_URL }}
+          max-attempts: 3
+          retry-delay: 5s
+      - name: Success
+        if: ${{ success() }}
+        uses: stegzilla/discord-notify@v4
+        with:
+          title: Health Check
+          colour: '#008000'
+          message: Bloglist at ${{ env.RENDER_URL }} is healthy
+          webhook_url: ${{ secrets.DISCORD_WEBHOOK }}
+      - name: Failure
+        if: ${{ failure() }}
+        uses: stegzilla/discord-notify@v4
+        with:
+          title: Health Check
+          colour: '#FF0000'
+          message: Health check at ${{ env.RENDER_URL }} failed
+          webhook_url: ${{ secrets.DISCORD_WEBHOOK }}

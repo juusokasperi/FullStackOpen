@@ -1,0 +1,4 @@
+postgres_data/
+.env
+node_modules
+.DS_STORE

@@ -1,0 +1,12 @@
+Script started on Thu Sep 26 11:29:19 2024
+Restored session: Thu Sep 26 11:27:40 EEST 2024
+[1m[7m%[27m[1m[0m                                                                                                                 ]7;file://Juusos-MacBook-Air.local/Users/juusorinta/FullstackOpen/part12-containers-applications/script-answers]2;juusorinta@Juusos-MacBook-Air]1;..cript-answers]7;file://Juusos-MacBook-Air.local/Users/juusorinta/FullstackOpen/part12-containers-applications/script-answers\[0m[27m[24m[J[35m[00m ~/FullstackOpen/part12-containers-applications/script-answers/ [00m[35m[[32mmain[35m][39m [00m[K[?1h=[?2004h[7mdocker run -it ubuntu bash[27m[26D[27md[27mo[27mc[27mk[27me[27mr[27m [27mr[27mu[27mn[27m [27m-[27mi[27mt[27m [27mu[27mb[27mu[27mn[27mt[27mu[27m [27mb[27ma[27ms[27mh[?1l>[?2004l
+]2;docker run -it ubuntu bash]1;docker[?2004h]0;root@9f0f98555936: /root@9f0f98555936:/# mkdir -p u /usr/src/app
+[?2004l[?2004h]0;root@9f0f98555936: /root@9f0f98555936:/# touch /usr/src/app/index.js
+[?2004l[?2004h]0;root@9f0f98555936: /root@9f0f98555936:/# [Kexit
+[?2004lexit
+[1m[7m%[27m[1m[0m                                                                                                                 ]7;file://Juusos-MacBook-Air.local/Users/juusorinta/FullstackOpen/part12-containers-applications/script-answers]2;juusorinta@Juusos-MacBook-Air]1;..cript-answers]7;file://Juusos-MacBook-Air.local/Users/juusorinta/FullstackOpen/part12-containers-applications/script-answers\[0m[27m[24m[J[35m[00m ~/FullstackOpen/part12-containers-applications/script-answers/ [00m[35m[[32mmain[35m][39m [00m[K[?1h=[?2004heexit[?1l>[?2004l
+]2;exit]1;exit
+Saving session...completed.
+
+Script done on Thu Sep 26 11:29:54 2024

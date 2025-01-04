@@ -1,0 +1,41 @@
+services:
+  frontend-dev:
+    image: blog-frontend-dev
+    volumes:
+      - ./frontend:/usr/src/app
+      - /usr/src/app/node_modules
+    environment:
+      - NODE_ENV=development
+    build:
+      context: ./frontend
+      dockerfile: dev.Dockerfile
+      args:
+        - VITE_BACKEND_URL=http://localhost:8000/api/
+    expose:
+      - 5173
+    depends_on:
+      - backend-dev
+
+  backend-dev:
+    image: blog-backend-dev
+    volumes:
+      - ./backend:/usr/src/app
+      - /usr/src/app/node_modules
+    build:
+      context: ./backend
+      dockerfile: dev.Dockerfile
+    expose:
+      - 3000
+    env_file:
+      - ./backend/.env
+
+  nginx:
+    image: nginx:1.27-alpine
+    volumes:
+      - ./nginx.dev.conf:/etc/nginx/nginx.conf:ro
+    ports:
+      - 8000:80
+    container_name: reverse_proxy
+    depends_on:
+      - frontend-dev
+      - backend-dev
